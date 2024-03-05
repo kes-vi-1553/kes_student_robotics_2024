@@ -1,0 +1,28 @@
+[0:00:00] ---
+[0:00:00] Student Robotics OS 2024.1.0
+[0:00:00] Is there something you'd like us to add to the kit or API? 💡
+[0:00:00] Perhaps there's something you think we should improve? 🛠️
+[0:00:00] Let us know your feedback about your experience using our kit at https://studentrobotics.org/kit-feedback 🗣️
+[0:00:00] ---
+[0:00:00] === LOG STARTED ===
+[0:00:01.619345] sr.robot3.robot - INFO - sr.robot3 version 2024.0.1
+[0:00:01.704073] sr.robot3.serial_wrapper - INFO - Connected to board Power Board v4: sr0RT2F
+[0:00:01.728161] sr.robot3.serial_wrapper - INFO - Connected to board Servo Board v4: sr0GX2W
+[0:00:01.886939] sr.robot3.robot - INFO - Found PowerBoard, serial: sr0RT2F
+[0:00:01.905109] sr.robot3.robot - INFO - Found ServoBoard, serial: sr0GX2W
+[0:00:01.922981] sr.robot3.robot - INFO - Waiting for start button.
+[0:00:03.195908] sr.robot3.robot - INFO - Start signal received; continuing.
+[0:00:08.197979] Traceback (most recent call last):
+[0:00:09.348138]   File "/media/robot/KINGSTON29/robot.py", line 12, in <module>
+[0:00:09.366825]     my_motor_board.servos[pin].position = -1.2
+[0:00:09.384764]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0:00:09.402422]   File "/home/robot/.pyenv/versions/3.11.5/lib/python3.11/site-packages/sr/robot3/logging.py", line 99, in wrapper_debug
+[0:00:09.420214]     value = _func(*args, **kwargs)
+[0:00:09.437954]             ^^^^^^^^^^^^^^^^^^^^^^
+[0:00:09.455671]   File "/home/robot/.pyenv/versions/3.11.5/lib/python3.11/site-packages/sr/robot3/servo_board.py", line 325, in position
+[0:00:09.473481]     value = float_bounds_check(
+[0:00:09.491182]             ^^^^^^^^^^^^^^^^^^^
+[0:00:09.509093]   File "/home/robot/.pyenv/versions/3.11.5/lib/python3.11/site-packages/sr/robot3/utils.py", line 180, in float_bounds_check
+[0:00:09.526840]     raise ValueError(err_msg)
+[0:00:09.544567] ValueError: Servo position is a float between -1.0 and 1.0
+[0:00:09.569742] === LOG FINISHED ===
